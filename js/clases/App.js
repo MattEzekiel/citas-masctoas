@@ -7,7 +7,7 @@ import {
     sintomasInput,
     telefonoInput
 } from "../selectores.js";
-import {datosCita, nuevaCita} from "../funciones.js";
+import {crearDB, datosCita, nuevaCita} from "../funciones.js";
 
 class App {
     constructor() {
@@ -24,6 +24,9 @@ class App {
 
         // Formulario
         formulario.addEventListener('submit', nuevaCita);
+
+        // BBDD
+        crearDB();
     }
 }
 
